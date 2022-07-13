@@ -8,7 +8,6 @@ const SlidGalleryCss = styled.div`
     background-image: url(${img1});
     background-size: cover;
     background-position: center;
-    position: absolute;
 
     .btn{
         position: relative;
