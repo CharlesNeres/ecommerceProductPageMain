@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const NavCss = styled.nav`
-    background-color: pink;
     padding: 1em;
     overflow: hidden;    
 
