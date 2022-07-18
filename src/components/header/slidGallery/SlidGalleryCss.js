@@ -5,7 +5,7 @@ const SlidGalleryCss = styled.div`
     width: 100%;
     height: 20em;
     background-color: red;
-    background-image: url(${img1});
+    /* background-image: url(${img1}); */
     background-size: cover;
     background-position: center;
 
@@ -22,7 +22,8 @@ const SlidGalleryCss = styled.div`
             width: 2em;
             height: 2em;
             border-radius: 50%;
-        
+            cursor: pointer;
+            
             img{
                 height: 40%;          
             }
