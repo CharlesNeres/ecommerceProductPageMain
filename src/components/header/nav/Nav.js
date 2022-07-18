@@ -6,12 +6,24 @@ import avatar from '../../../images/image-avatar.png';
 import NavCss from "./NavCss";
 
 class Nav extends React.Component{
+    constructor(props){
+        super(props);
+        this.openNav = this.openNav.bind(this);
+    }
+
+    openNav(e){
+        e.preventDefault();
+        const divApp = e.target.closest(".App");
+        const menuSlid = divApp.lastElementChild;
+        menuSlid.style.width = '60%';
+    }
+
     render(){
         return(
             <NavCss>
                 
                 <div className="iconLeft">
-                    <img src={iconMenu} id="iconMenu" alt="icon menu" />
+                    <img src={iconMenu} onClick={this.openNav} id="iconMenu" alt="icon menu" />
                     <img src={logo} id="logo" alt="logo" />
                 </div>
                 <div className="iconRight">

@@ -20,6 +20,10 @@ const NavCss = styled.nav`
             margin-left: 1em;
         } 
     }    
+
+    img{
+        cursor: pointer;
+    }
 `;
 
 export default NavCss;
