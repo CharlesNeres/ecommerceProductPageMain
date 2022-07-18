@@ -7,15 +7,38 @@ import BottomCss from "./BottomCss";
 import iconCart from "../../images/icon-cart.svg";
 
 class Bottom extends React.Component{
+    constructor(props){
+        super(props);
+        this.increase = this.increase.bind(this);
+        this.decrease = this.decrease.bind(this);
+        this.state = {
+            value: 0
+        }
+    }
+
+    decrease(){
+        if(this.state.value > 0){
+            this.setState({
+                value: this.state.value - 1
+            })
+        }
+    }
+
+    increase(){
+        this.setState({
+            value: this.state.value + 1
+        })
+    }
+
     render(){
         return(
             <BottomCss>                
                 <div className="increaseDecreaseUnit">
-                    <button>
+                    <button onClick={this.decrease}>
                         <img src={minus} alt="minus" />
                     </button>
-                    <span>0</span>
-                    <button>
+                    <span>{this.state.value}</span>
+                    <button onClick={this.increase}>
                         <img src={plus} alt="plus" />
                     </button>
                 </div>
